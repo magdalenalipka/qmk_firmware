@@ -15,6 +15,7 @@
  */
 #include QMK_KEYBOARD_H
 
+
 enum layers {
   _QWERTY,
   _SPECIAL,
@@ -63,28 +64,51 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
     
     [_GAME_NUMBERS] = LAYOUT_planck_mit(
-        _______, KC_1,    KC_2,    KC_3,    _______, _______, _______, _______, _______, _______, _______, _______, 
-        _______, KC_4,    KC_5,    KC_6,    _______, _______, _______, _______, _______, _______, _______, _______, 
-        _______, KC_7,    KC_8,    KC_9,    _______, _______, _______, _______, _______, _______, _______, _______, 
+        _______, KC_1,    KC_2,    KC_3,    XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, _______, 
+        _______, KC_4,    KC_5,    KC_6,    XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, _______, 
+        _______, KC_7,    KC_8,    KC_9,    XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, _______, 
         _______, _______, KC_0,    XXXXXXX, _______,     _______,      _______, _______, _______, _______, XXXXXXX
     ),
     
     [_GAME_ARROWS] = LAYOUT_planck_mit(
-        _______, XXXXXXX, KC_UP,   XXXXXXX, _______, _______, _______, _______, _______, _______, _______, _______, 
-        _______, KC_LEFT, KC_DOWN, KC_RGHT, _______, _______, _______, _______, _______, _______, _______, _______, 
-        _______, XXXXXXX, XXXXXXX, XXXXXXX, _______, _______, _______, _______, _______, _______, _______, _______, 
-        _______, _______, XXXXXXX, _______, XXXXXXX,     _______,      _______, _______, _______, _______, XXXXXXX
+        _______, XXXXXXX, KC_UP,   XXXXXXX, XXXXXXX, KC_BRID, KC_BRIU, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, _______, 
+        _______, KC_LEFT, KC_DOWN, KC_RGHT, XXXXXXX, KC_VOLD, KC_VOLU, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, _______, 
+        _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, _______,
+        _______, _______, XXXXXXX, _______, XXXXXXX,     _______,      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
     )
 
 };
 
 #ifdef RGB_MATRIX_ENABLE
 
+__attribute__((weak)) RGB rgblight_hsv_to_rgb(HSV hsv) { return hsv_to_rgb(hsv); }
+
+void set_white(uint8_t index) {
+    HSV hsv = rgb_matrix_config.hsv;
+    hsv.h   = 0;
+    hsv.s   = 0;
+    RGB rgb = rgblight_hsv_to_rgb(hsv);
+    rgb_matrix_set_color(index, rgb.r, rgb.g, rgb.b);
+}
+
 void rgb_matrix_indicators_advanced_user(uint8_t led_min, uint8_t led_max) {
-    uint8_t space_index = 41;
     if (host_keyboard_led_state().caps_lock) {
-        rgb_matrix_set_color(space_index, RGB_WHITE);
+        set_white(41);
+    }
+    if(IS_LAYER_ON(_GAME_QWERTY)) {
+        set_white(0);
+    }
+    if(IS_LAYER_ON(_NUMBERS) || IS_LAYER_ON(_GAME_NUMBERS)) {
+        set_white(12);
+    }
+    if(IS_LAYER_ON(_SPECIAL) || IS_LAYER_ON(_GAME_ARROWS)) {
+        set_white(24);
+    }
+    if(IS_LAYER_ON(_FUNCTION)) {
+        set_white(12);
+        set_white(24);
     }
 }
+
 #endif
 
