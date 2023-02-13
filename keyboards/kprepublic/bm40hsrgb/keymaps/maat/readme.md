@@ -26,7 +26,7 @@
 |  xxx |  xxx |  xxx |  xxx |  xxx |  xxx |  xxx |  xxx |   1  |   2  |   3  | Del  |
 |-|-|-|-|-|-|-|-|-|-|-|-|
 |      |  xxx |  xxx |  xxx |  xxx |  xxx |  xxx |  xxx |   4  |   5  |   6  |PtrScr|
-|      |  xxx |  xxx |  xxx |  xxx |  xxx |  xxx |  xxx |   7  |   8  |   9  | xxx  |
+|      |  xxx |  xxx |  xxx |  xxx |  xxx |  xxx |  xxx |   7  |   8  |   9  |      |
 |      |      |  xxx |      | _FUN |            ||      |  xxx |   0  | xxx  | xxx  |
 
 ### Function (special + numbers)
