@@ -32,21 +32,21 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_ESC,    KC_Q,    KC_W,          KC_E,    KC_R,          KC_T,    KC_Y,    KC_U,         KC_I,    KC_O,    KC_P,    KC_BSPC,
         KC_LSFT,  KC_A,    KC_S,          KC_D,    KC_F,          KC_G,    KC_H,    KC_J,         KC_K,    KC_L,    KC_BSLS, KC_ENT,
         KC_LCTL,  KC_Z,    KC_X,          KC_C,    KC_V,          KC_B,    KC_N,    KC_M,         KC_COMM, KC_DOT,  KC_SLSH, KC_RALT ,
-        KC_TAB,   KC_LALT, KC_CAPS_LOCK,  KC_LGUI, MO(_SPECIAL),     KC_SPC,        MO(_NUMBERS), KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT
+        KC_TAB,   KC_LALT, KC_CAPS_LOCK,  KC_F13, MO(_SPECIAL),     KC_SPC,        MO(_NUMBERS), KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT
     ),
     
     [_SPECIAL] = LAYOUT_planck_mit(
         KC_TILD, KC_EXLM, KC_AT,     KC_HASH,   XXXXXXX,    XXXXXXX,   XXXXXXX,   KC_LPRN,       KC_RPRN, KC_LCBR, KC_RCBR, KC_PLUS,
         _______, KC_DLR,  KC_PERC,   KC_CIRC,   XXXXXXX,    XXXXXXX,   XXXXXXX,   KC_LBRC,       KC_RBRC, KC_QUOT, KC_DQUO, KC_MINS,
         _______, KC_AMPR, KC_ASTR,   KC_GRV,    XXXXXXX,    XXXXXXX,   XXXXXXX,   KC_SCLN,       KC_COLN, KC_UNDS, KC_EQL,  KC_INS,
-        _______, _______, XXXXXXX,   XXXXXXX,   _______,         _______,         MO(_FUNCTION), KC_HOME, KC_PGDN, KC_PGUP, KC_END
+        _______, _______, XXXXXXX,   _______,   _______,         _______,         MO(_FUNCTION), KC_HOME, KC_PGDN, KC_PGUP, KC_END
     ),
     
     [_NUMBERS] = LAYOUT_planck_mit(
         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,       XXXXXXX, XXXXXXX, XXXXXXX, KC_1,    KC_2, KC_3,    KC_DEL,
         _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,       XXXXXXX, XXXXXXX, XXXXXXX, KC_4,    KC_5, KC_6,    KC_PSCR,
         _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,       XXXXXXX, XXXXXXX, XXXXXXX, KC_7,    KC_8, KC_9,    _______,
-        _______, _______, XXXXXXX, _______, MO(_FUNCTION),     _______,      _______, XXXXXXX, KC_0, XXXXXXX, XXXXXXX
+        _______, _______, XXXXXXX, KC_LGUI, MO(_FUNCTION),     _______,      _______, XXXXXXX, KC_0, XXXXXXX, XXXXXXX
     ),
     
     [_FUNCTION] = LAYOUT_planck_mit(
