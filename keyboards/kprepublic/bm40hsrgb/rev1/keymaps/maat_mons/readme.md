@@ -3,9 +3,9 @@
 ## Layers
 
 ### Qwerty
-| Esc   |   Q  |   W  |   E  |   R  |   T  |   Y  |   U  |   I  |   O  |   P  | Bksp |
+| Esc   |   Q  |   W  |   E  |   R  |   T  |   Y  |   U  |   I  |   O  |   P  |Enter |
 |-|-|-|-|-|-|-|-|-|-|-|-|
-| LShift|   A  |   S  |   D  |   F  |   G  |   H  |   J  |   K  |   L  |   ;  |Enter |
+| LShift|   A  |   S  |   D  |   F  |   G  |   H  |   J  |   K  |   L  |   ;  | Bksp |
 | LCtrl |   Z  |   X  |   C  |   V  |   B  |   N  |   M  |   ,  |   .  |   /  |RAlt  |
 | Tab   | LAlt |      | GUI  | _NUM |    Space   ||_SPEC | Left | Down |  Up  |Right |
 
@@ -17,11 +17,11 @@
 |      |      |      | xxx  |      | _FUN |            ||      | Home |PgDown| PgUp | End  |
 
 ### Numbers
-|  xxx |  xxx |   1  |   2  |   3  |  xxx |  xxx |  xxx |   1  |   2  |   3  | Del  |
+| Bksp |  xxx |   1  |   2  |   3  |  xxx |  xxx |  xxx |   1  |   2  |   3  | Del  |
 |-|-|-|-|-|-|-|-|-|-|-|-|
 |      |  xxx |   4  |   5  |   6  |  xxx |  xxx |  xxx |   4  |   5  |   6  |PtrScr|
 |      |  xxx |   7  |   8  |   9  |  xxx |  xxx |  xxx |   7  |   8  |   9  |      |
-|      |      |      |   0  |      |            || _FUN |  xxx |   0  | xxx  | xxx  |
+|Enter |      |      |   0  |      |            || _FUN |  xxx |   0  | xxx  | xxx  |
 
 ### Function (special + numbers)
 | Reset| xxx    |rgbMode+| Hue-  |Hue+   |Bright- |Bright+| xxx  | F1   |F2    |F3    |  xxx       |
